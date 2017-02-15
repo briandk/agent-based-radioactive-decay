@@ -11,7 +11,7 @@ decay_data <- tibble::tribble(
 try_to_decay_a_particle <- function(particle) {
   decay_probability <- 0.5
   does_particle_decay <- (runif(1, 0, 1) >= decay_probability)
-  if (particle == 0 && does_particle_decay) {
+  if (particle == 0 & does_particle_decay) {
     particle <- 1
   }
   return (particle)
